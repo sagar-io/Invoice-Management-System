@@ -1,0 +1,67 @@
+.invoice-form {
+  font-size: 0.9rem;
+}
+
+.items-inputs {
+  @media (max-width: 500px) {
+    font-size: 0.7rem !important;
+  }
+}
+.items-table {
+  @media (max-width: 500px) {
+    font-size: 0.7rem !important;
+
+    tr,
+    td {
+      padding: 0 !important;
+      min-width: unset !important;
+    }
+  }
+
+  td:first-child {
+    min-width: 100px;
+  }
+}
+
+input {
+  font-size: 0.85rem !important;
+}
+
+@media (max-width: 500px) {
+  input::placeholder {
+    font-size: 0.6rem;
+  }
+
+  .notes {
+    font-size: 0.7rem !important;
+  }
+}
+
+.modal {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 0.8rem !important;
+  }
+
+  @media (max-width: 500px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 0.7rem !important;
+    }
+  }
+
+  @media (max-width: 990px) {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+header {
+  background-color: $blue;
+
+  div {
+    width: fit-content;
+  }
+  h2 {
+    font-weight: 700;
+    padding: 1rem 2rem;
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+
+    @media (max-width: 500px) {
+      font-size: 1.5rem;
+      padding: 0.75rem 1rem;
+    }
+  }
+}

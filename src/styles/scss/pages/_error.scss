@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+
+.error-wrapper {
+  height: 100vh;
+  @include flex(column);
+
+  .warning {
+    color: red;
+    font-size: 3rem;
+  }
+
+  p {
+    margin: 0;
+  }
+}

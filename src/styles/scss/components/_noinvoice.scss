@@ -1,0 +1,20 @@
+.no-invoice-wrapper {
+  position: relative;
+  padding-top: 2rem;
+
+  .arrow {
+    position: absolute;
+    left: 0%;
+    top: 45%;
+  }
+  @media (max-width: 850px) {
+    .arrow {
+      display: none;
+    }
+  }
+  @media (max-width: 500px) {
+    img {
+      width: 300px;
+    }
+  }
+}

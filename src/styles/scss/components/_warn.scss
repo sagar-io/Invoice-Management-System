@@ -1,0 +1,16 @@
+@use '../abstracts/' as *;
+
+.warn {
+    color: red;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    @include flex();
+    gap: 0.5rem;
+
+    @media (max-width: 500px) {
+        font-size: 0.8rem;
+        gap: 5px;
+        margin-top: 4px;
+    }
+}

@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+.home-wrapper {
+  @include flex();
+  justify-content: start;
+  align-items: flex-start;
+
+  @media (max-width: 850px) {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,476 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "DM Sans", sans-serif !important;
+}
+
+a, Link {
+  text-decoration: none !important;
+}
+
+p {
+  margin: 0;
+}
+
+.error-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.error-wrapper .warning {
+  color: red;
+  font-size: 3rem;
+}
+.error-wrapper p {
+  margin: 0;
+}
+
+.home-wrapper {
+  display: flex;
+  flex-direction: "column";
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-content: start;
+  align-items: flex-start;
+}
+@media (max-width: 850px) {
+  .home-wrapper {
+    flex-direction: column;
+  }
+}
+
+.menubar-wrapper {
+  padding: 4rem;
+}
+.menubar-wrapper a {
+  text-decoration: none;
+}
+@media (max-width: 1000px) {
+  .menubar-wrapper {
+    padding: 2rem;
+  }
+}
+
+.new-card {
+  border-radius: 5px;
+  cursor: pointer;
+}
+.new-card p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+.new-card img {
+  transition: transform 0.3s;
+}
+.new-card img:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 500px) {
+  .new-card img {
+    width: 80px;
+  }
+}
+
+.invoices-wrapper {
+  padding: 4rem;
+  width: 100%;
+  max-width: 1100px;
+  border-left: 1px solid rgba(128, 128, 128, 0.539);
+  min-height: 90vh;
+}
+.invoices-wrapper h2 {
+  text-align: left;
+}
+@media (max-width: 500px) {
+  .invoices-wrapper h2 {
+    font-size: 1.35rem;
+    margin: 1rem 0 -2rem 2rem;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-color: rgba(51, 51, 51, 0.7647058824);
+  }
+}
+.invoices-wrapper .invoice-commands {
+  padding: 0.5rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: "column";
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-content: end;
+}
+.invoices-wrapper table {
+  width: 100%;
+}
+.invoices-wrapper table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid rgba(174, 174, 174, 0.301);
+}
+.invoices-wrapper table th {
+  padding: 1rem 0.25rem;
+}
+.invoices-wrapper table tr {
+  cursor: pointer;
+}
+.invoices-wrapper table tr:hover {
+  background-color: rgba(205, 213, 236, 0.317);
+  transition: background-color 0.25s;
+}
+.invoices-wrapper table thead {
+  background-color: #333;
+  color: white;
+}
+.invoices-wrapper table thead tr:hover {
+  background-color: #333;
+  cursor: unset;
+}
+@media (max-width: 660px) {
+  .invoices-wrapper table td {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+  .invoices-wrapper table th {
+    padding: 0.7rem 0;
+  }
+}
+@media (max-width: 500px) {
+  .invoices-wrapper table td {
+    padding: 5px 0px;
+    font-size: 0.8rem;
+  }
+  .invoices-wrapper table th {
+    padding: 8px 0;
+    font-size: 0.8rem;
+  }
+}
+.invoices-wrapper input[type=checkbox] {
+  cursor: pointer;
+}
+@media (max-width: 1000px) {
+  .invoices-wrapper {
+    padding: 2rem;
+  }
+}
+@media (max-width: 850px) {
+  .invoices-wrapper {
+    min-height: unset;
+    border-left: none;
+    padding: 1rem;
+  }
+}
+@media (max-width: 660px) {
+  .invoices-wrapper {
+    padding: 0;
+  }
+}
+@media (max-width: 500px) {
+  .invoices-wrapper .optional {
+    display: none;
+  }
+}
+
+.warn {
+  color: red;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: "column";
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+@media (max-width: 500px) {
+  .warn {
+    font-size: 0.8rem;
+    gap: 5px;
+    margin-top: 4px;
+  }
+}
+
+.copy {
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: monospace;
+  background-color: #2754ff;
+  color: white;
+  padding: 0.25rem 0.65rem;
+  transition: 0.35s;
+}
+@media (max-width: 500px) {
+  .copy {
+    font-size: 0.75rem;
+    padding: 2px 5px;
+  }
+}
+.copy:hover {
+  background-color: #2754ff;
+}
+
+@media (max-width: 767px) {
+  .download-btn,
+  .save-btn {
+    font-size: 0.8rem !important;
+  }
+}
+.no-invoice-wrapper {
+  position: relative;
+  padding-top: 2rem;
+}
+.no-invoice-wrapper .arrow {
+  position: absolute;
+  left: 0%;
+  top: 45%;
+}
+@media (max-width: 850px) {
+  .no-invoice-wrapper .arrow {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .no-invoice-wrapper img {
+    width: 300px;
+  }
+}
+
+.invoice-form {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 500px) {
+  .items-inputs {
+    font-size: 0.7rem !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .items-table {
+    font-size: 0.7rem !important;
+  }
+  .items-table tr,
+  .items-table td {
+    padding: 0 !important;
+    min-width: unset !important;
+  }
+}
+.items-table td:first-child {
+  min-width: 100px;
+}
+
+input {
+  font-size: 0.85rem !important;
+}
+
+@media (max-width: 500px) {
+  input::placeholder {
+    font-size: 0.6rem;
+  }
+  .notes {
+    font-size: 0.7rem !important;
+  }
+}
+.modal {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
+}
+.modal h1,
+.modal h2,
+.modal h3,
+.modal h4,
+.modal h5,
+.modal h6 {
+  font-size: 0.8rem !important;
+}
+@media (max-width: 500px) {
+  .modal h1,
+  .modal h2,
+  .modal h3,
+  .modal h4,
+  .modal h5,
+  .modal h6 {
+    font-size: 0.7rem !important;
+  }
+}
+@media (max-width: 990px) {
+  .modal {
+    font-size: 0.75rem;
+  }
+}
+
+header {
+  background-color: #2754ff;
+}
+header div {
+  width: fit-content;
+}
+header h2 {
+  font-weight: 700;
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+}
+@media (max-width: 500px) {
+  header h2 {
+    font-size: 1.5rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+.m-0 {
+  margin: 0rem;
+}
+
+.p-0 {
+  padding: 0rem;
+}
+
+.my-0 {
+  margin: 0rem 0;
+}
+
+.py-0 {
+  padding: 0rem 0;
+}
+
+.mx-0 {
+  margin: 0 0rem;
+}
+
+.px-0 {
+  padding: 0 0rem;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+
+.mx-1 {
+  margin: 0 1rem;
+}
+
+.px-1 {
+  padding: 0 1rem;
+}
+
+.m-2 {
+  margin: 2rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.my-2 {
+  margin: 2rem 0;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.mx-2 {
+  margin: 0 2rem;
+}
+
+.px-2 {
+  padding: 0 2rem;
+}
+
+.m-3 {
+  margin: 3rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.my-3 {
+  margin: 3rem 0;
+}
+
+.py-3 {
+  padding: 3rem 0;
+}
+
+.mx-3 {
+  margin: 0 3rem;
+}
+
+.px-3 {
+  padding: 0 3rem;
+}
+
+.m-4 {
+  margin: 4rem;
+}
+
+.p-4 {
+  padding: 4rem;
+}
+
+.my-4 {
+  margin: 4rem 0;
+}
+
+.py-4 {
+  padding: 4rem 0;
+}
+
+.mx-4 {
+  margin: 0 4rem;
+}
+
+.px-4 {
+  padding: 0 4rem;
+}
+
+.m-5 {
+  margin: 5rem;
+}
+
+.p-5 {
+  padding: 5rem;
+}
+
+.my-5 {
+  margin: 5rem 0;
+}
+
+.py-5 {
+  padding: 5rem 0;
+}
+
+.mx-5 {
+  margin: 0 5rem;
+}
+
+.px-5 {
+  padding: 0 5rem;
+}
+
+/*# sourceMappingURL=main.css.map */
