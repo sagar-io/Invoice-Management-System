@@ -14,6 +14,14 @@ The Invoices can be downloaded as PDFs. Uses [jspdf-react](https://www.npmjs.com
 ![image](https://github.com/sagar-io/Invoice-Management-System/assets/86215447/35eeb663-fcae-40e7-8179-6962d80d38d2)
 
 
+## Technologies used -
+- React
+- Redux
+- Redux Toolkit
+- React Redux 
+- Bootstrap
+- Sass
+
 ### Project setup in the local environment - 
 ```
 git clone https://github.com/sagar-io/Invoice-Management-System
@@ -29,4 +37,9 @@ npm start
 npm run build
 ```
 
-#### [Live Demo](https://invoice-management-io.netlify.app/)
+### [Live Demo](https://invoice-management-io.netlify.app/)
+
+
+## Author
+
+- [Sagar Sharma](https://www.sagars.me)
