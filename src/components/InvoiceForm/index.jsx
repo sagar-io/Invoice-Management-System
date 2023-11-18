@@ -24,8 +24,6 @@ const InvoiceForm = () => {
   const { id } = useParams(); // for edit Invoice
 
   const preInvoice = useGetInvoice(id || state);
-  console.log(id);
-  console.log(typeof id);
 
   const [formData, setFormData] = useImmer(formSchema);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,7 +33,6 @@ const InvoiceForm = () => {
   }, [formData]);
 
   useEffect(() => {
-    console.log(preInvoice);
     if (id && !preInvoice) {
       navigate("/error-page");
     }
