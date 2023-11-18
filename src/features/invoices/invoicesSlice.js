@@ -19,7 +19,7 @@ const invoiceSlice = createSlice({
     edited: (state, action) => {
       const { editableInvoiceNumber, newData } = action.payload;
       const index = state.findIndex(
-        (invoice) => invoice.invoiceNumber === editableInvoiceNumber
+        (invoice) => invoice.invoiceNumber == editableInvoiceNumber
       );
       state.splice(index, 1);
       state.push(newData);
